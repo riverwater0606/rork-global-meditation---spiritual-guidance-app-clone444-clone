@@ -1,0 +1,17 @@
+{
+  "framework": null,
+  "buildCommand": "rm -f metro.config.js && echo \"const { getDefaultConfig } = require('expo/metro-config'); module.exports = getDefaultConfig(__dirname);\" > metro.config.js && npx expo export -p web",
+  "devCommand": "npx expo start",
+  "installCommand": "npm install --legacy-peer-deps",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/_expo/(.*)",
+      "destination": "/_expo/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
